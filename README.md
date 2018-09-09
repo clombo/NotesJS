@@ -58,11 +58,11 @@ node app.js add --title="Your status", --body="Note body", --status="pending"
 ```shell
 node app.js remove --id=1
 ```
-###### update
+###### update example
 ```shell
 node app.js update --id=1 --title="new title" --body="new body" --status="complete"
 ```
-###### view
+###### view example
 ```shell
 node app.js view
 ```
