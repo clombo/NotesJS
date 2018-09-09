@@ -30,6 +30,15 @@ var RandomID = (low,high) => {
   return Math.floor(Math.random() * (high - low ) + low);
 };
 
+var DupCheck = (title,notes) =>{
+  var dup = notes.filter((note) => note.title === title);
+  if (dup.length === 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
 //functions used externally and exported for use
 
 
@@ -56,9 +65,9 @@ var addNote = (title,body,status) => {
       status
     };
 
-    var dup = notes.filter((note) => note.title === title);
+    var checkDup = DupCheck(title,notes);
 
-    if (dup.length === 0){
+    if (checkDup){
       notes.push(newNote);
       SaveNotes(notes);
       return newNote;
@@ -91,8 +100,9 @@ var updateNote = (id,data) => {
   var note = notes.filter((note) => note.id === id);
 
   var UpdateNote = note[0];
+  var checkDup = DupCheck(data.title,notes);
 
-  if (UpdateNote){
+  if (UpdateNote && checkDup){
 
     var NewNotes = notes.filter((note) => note.id !== id);
 

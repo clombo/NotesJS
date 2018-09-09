@@ -45,7 +45,7 @@ var updateController = (id,data,next) => {
     if(upNote){
       next(null,upNote);
     }else{
-      next(new Error('Note not found!'));
+      next(new Error('Note not found or duplicate title entry!'));
     };
   }else{
     next(new Error('No data give!'));
