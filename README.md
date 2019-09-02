@@ -2,7 +2,7 @@
 ***
 Based on the tutorial from the udemy course ["The complete nodejs developer course V2"](https://www.udemy.com/the-complete-nodejs-developer-course-2/).
 
-The project was adjusted a bit to do things differently and also added a view things.
+The project was adjusted a bit to do things differently and also added a few things.
 For a very simple app this is overcomplicating it a lot, but was worth the practice:
 
 * Changed to mimic "MVC like" feel.
